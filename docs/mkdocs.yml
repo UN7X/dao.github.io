@@ -1,0 +1,49 @@
+site_name: U-DAO API Platform Cookbook
+theme:
+  name: material
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.expand
+    - navigation.indexes
+    - content.code.copy
+
+# Navigation structure
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Overview: getting-started/overview.md
+      - Quick Start: getting-started/quick-start.md
+      - Installation: 
+        - Installation: getting-started/installation/installation.md
+        - Configuration: getting-started/installation/configuration.md
+      - Implementation: getting-started/implementation.md
+      
+  - API Reference:
+      - Overview: api-reference/overview.md
+      - Endpoints:
+          - TimeStamped: api-reference/endpoints/timestamped.md
+          - TL;DN: api-reference/endpoints/toolongdidntnavigate.md
+  - Tutorials:
+      - Basic Usage: tutorials/basic-usage.md
+      - Advanced Features: tutorials/advanced-features.md
+  - FAQ: faq.md
+  - Changelog: changelog.md
+  - About: about.md
