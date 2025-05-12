@@ -47,3 +47,6 @@ nav:
   - FAQ: faq.md
   - Changelog: changelog.md
   - About: about.md
+
+extra:
+  favicon: images/favicon.ico
