@@ -1,5 +1,9 @@
-# Installation Guide
+# Installation
 
-Follow these instructions to install the project.
+Clone the repository and install the required Python packages.
 
-Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+```bash
+git clone https://github.com/your-org/dao.github.io.git
+cd dao.github.io
+pip install -r requirements.txt
+```

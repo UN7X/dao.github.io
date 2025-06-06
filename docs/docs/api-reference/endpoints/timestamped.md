@@ -1,5 +1,12 @@
-# TimeStamped Endpoint
+# Timestamped
 
-Documentation for the TimeStamped endpoint.
+POST `/api/v1/timestamped/timestamp`
 
-Hanc ego cum teneam sententiam, quid est cur verear, ne ad eam non possim accommodare Torquatos nostros? quos tu paulo ante cum memoriter, tum etiam erga nos amice et benivole collegisti.
+Request body:
+```json
+{ "content": "string" }
+```
+
+Returns a SHA-256 hash of the content with a UTC timestamp and signature.
+
+GET `/api/v1/timestamped/health` returns `{"status": "ok"}`.

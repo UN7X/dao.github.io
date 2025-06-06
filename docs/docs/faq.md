@@ -1,5 +1,6 @@
 # Frequently Asked Questions
 
-Common questions and answers.
+**Why is the API key hard-coded?**
 
-Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+This project is a demonstration. Replace the key check in `app/core/auth.py` with
+a real authentication mechanism for production use.

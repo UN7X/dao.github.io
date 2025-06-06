@@ -1,18 +1,32 @@
-# dao.github.io
-U-DAO Official API & Docs Site.
+# UDAO API Platform
 
+A minimal FastAPI project providing three small services used by the U-DAO community.
 
+## Features
 
-# Why?
+- **Timestamped** – create signed timestamps for arbitrary text
+- **HashCache** – submit hashes with metadata and query them later
+- **ASIX** – simple lockers for storing JSON objects with optional access keys
 
-A FastAPI based API designed to be actually useful.
+All endpoints require an `Authorization: Bearer supersecret` header in this demo setup.
 
-This is a challenge to myself to use AI as little as possible.
-Upon reviewing the code, you may see some overly commented snippets. Yes, i used AI for the tedious parts, but not before learning how they worked, and then got some practice first.
+## Getting Started
 
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. Start the server:
+   ```bash
+   ./run.sh        # or run.bat on Windows
+   ```
+3. Browse the interactive docs at [http://localhost:8000/docs](http://localhost:8000/docs)
 
-### Created by:
-> UN7X
+## Running Tests
+
+```bash
+pytest
+```
 
 ## License
 

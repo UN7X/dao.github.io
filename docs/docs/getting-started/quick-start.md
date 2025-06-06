@@ -1,5 +1,8 @@
 # Quick Start
 
-Get started quickly with these steps.
+```bash
+pip install -r requirements.txt
+./run.sh
+```
 
-Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+The API will be available at `http://localhost:8000`.

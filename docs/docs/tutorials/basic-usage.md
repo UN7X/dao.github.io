@@ -1,5 +1,11 @@
 # Basic Usage
 
-This is a placeholder for basic usage instructions.
+Use the timestamp service to sign any string:
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, vitae aliquam nisl nisl vitae nisl.
+```bash
+curl -X POST \
+  -H "Authorization: Bearer supersecret" \
+  -H "Content-Type: application/json" \
+  -d '{"content":"hello"}' \
+  http://localhost:8000/api/v1/timestamped/timestamp
+```
