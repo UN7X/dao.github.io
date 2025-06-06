@@ -9,3 +9,4 @@ IF EXIST ".marker_file" (
 )
 echo Starting server with Uvicorn...
 uvicorn app.main:app --host 0.0.0.0 --port 8000
+
