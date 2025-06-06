@@ -1,3 +1,4 @@
+#!/bin/sh
 if [ -f ".marker_file" ]; then
     echo "Marker file exists. Skipping setup."
 else
@@ -6,4 +7,5 @@ else
     touch .marker_file
 fi
 
-gunicorn app.main:app -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000
+uvicorn app.main:app --host 0.0.0.0 --port 8000
+
