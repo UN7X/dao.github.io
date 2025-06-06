@@ -1,23 +1,17 @@
-# Welcome to MkDocs
+# UDAO API Platform
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Welcome to the documentation for the UDAO API Platform. This project exposes a few
+small services built with [FastAPI](https://fastapi.tiangolo.com/) that are used
+by the U-DAO community. Use the guides below to get up and running quickly.
 
-## Commands
+## Available Services
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+- **Timestamped** – sign content with a server timestamp
+- **HashCache** – record file hashes with optional metadata
+- **ASIX** – store JSON objects in ephemeral lockers
 
-## Project layout
+Each service has a dedicated API endpoint under `/api/v1/` and simple health
+checks for monitoring.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
-
-## Placeholder Section
-
-This is an additional placeholder section.
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+For a live, interactive view of the API, start the server and open `/docs` in
+your browser.

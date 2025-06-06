@@ -1,5 +1,4 @@
-# API Reference Overview
+# API Reference
 
-Overview of the API.
-
-Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+This section describes the available endpoints. All routes are prefixed with
+`/api/v1` and require the header `Authorization: Bearer supersecret`.

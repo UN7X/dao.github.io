@@ -1,5 +1,4 @@
 # Advanced Features
 
-This document will cover advanced features.
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+The ASIX service supports one-time access keys for reading objects. Use
+`/lockers/{id}/keys` to generate a key with optional expiry.

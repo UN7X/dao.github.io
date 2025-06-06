@@ -1,5 +1,6 @@
 # Changelog
 
-Record of all notable changes.
+All notable changes to this project will be documented in this file.
 
-Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+## 1.0.0
+- Initial release of the Timestamped, HashCache and ASIX services
