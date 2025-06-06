@@ -1,38 +1,24 @@
-import pytest
-from app import create_app
+import os
+import sys
+from fastapi.testclient import TestClient
 
-@pytest.fixture
-def client():
-    app = create_app()
-    app.config['TESTING'] = True
-    with app.test_client() as client:
-        yield client
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from app.main import app
 
-def test_health_endpoint(client):
-    response = client.get('/api/health')
+client = TestClient(app)
+
+
+def test_health_endpoint():
+    response = client.get('/api/v1/timestamped/health', headers={'Authorization': 'Bearer supersecret'})
     assert response.status_code == 200
-    json_data = response.get_json()
-    assert json_data['status'] == 'ok'
-    assert 'message' in json_data
+    assert response.json()['status'] == 'ok'
 
-def test_get_items(client):
-    response = client.get('/api/items')
+
+def test_timestamp_endpoint():
+    response = client.post(
+        '/api/v1/timestamped/timestamp',
+        json={'content': 'hello'},
+        headers={'Authorization': 'Bearer supersecret'}
+    )
     assert response.status_code == 200
-    json_data = response.get_json()
-    assert isinstance(json_data, list)
-    assert len(json_data) > 0
-
-def test_get_single_item(client):
-    response = client.get('/api/items/1')
-    assert response.status_code == 200
-    json_data = response.get_json()
-    assert json_data['id'] == 1
-    assert 'name' in json_data
-
-def test_create_item(client):
-    test_item = {'name': 'Test Item', 'description': 'This is a test'}
-    response = client.post('/api/items', json=test_item)
-    assert response.status_code == 201
-    json_data = response.get_json()
-    assert json_data['success'] is True
-    assert json_data['item']['name'] == 'Test Item'
+    assert 'timestamp' in response.json()

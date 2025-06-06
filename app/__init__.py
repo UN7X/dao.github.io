@@ -1,9 +1,12 @@
-from flask import Flask
+from fastapi import FastAPI
 
-def create_app():
-    app = Flask(__name__)
-    
-    from app.api import api_bp
-    app.register_blueprint(api_bp)
-    
+from app.core.router import api_router
+from app.core.middleware import setup_middleware
+
+
+def create_app() -> FastAPI:
+    app = FastAPI(title="UDAO API PLATFORM", version="1.0.0")
+    setup_middleware(app)
+    app.include_router(api_router, prefix="/api", tags=["api"])
     return app
+
